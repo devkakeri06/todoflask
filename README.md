@@ -33,7 +33,7 @@ $ (env) pip install -r requirements.txt
 $ (env) python -m flask run
 ```
 This will start the Flask development server and your app will be accessible at http://localhost:5000 in your web browser.
-Alternatively you can use https://devkakeri.pythonanywhere.com to test the API
+Alternatively you can use https://devkakeri06.pythonanywhere.com to test the API
 
 
 ## Steps to run on docker
