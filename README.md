@@ -1,49 +1,51 @@
 # todoflask
 
-Prerequisites:-
+## Prerequisites:-
 
 Python 3 or higher installed on your computer.
 Flask framework installed in Python. You can install Flask by running the following command in your terminal/command prompt:
+```
+$ pip install flask
+```
+## How To Run
+1. Install `virtualenv`:
+```
+$ pip install virtualenv
+```
 
-pip install flask
+2. Open a terminal in the project root directory and run:
+```
+$ ctrl + shift + p
+```
 
-Running the Flask app:- 
+3. Then run the command:
+```
+$ ctrl + shift + `
+```
 
-To run your Flask application from VS Code, follow these steps:
+4. Then install the dependencies:
+```
+$ (env) pip install -r requirements.txt
+```
 
-Open VS Code and navigate to the folder where your Flask app is located. You can do this by clicking File > Open Folder and selecting the folder containing your Flask app.
-
-Open a new terminal in VS Code by going to the Terminal menu and selecting New Terminal or by pressing `Ctrl+Shift+``.
-
-If you are using a virtual environment for your Flask app, activate it by running the following command:
-
-
-
-source venv/bin/activate  # Linux/Mac
-
-venv\Scripts\activate    # Windows
-
-This will activate the virtual environment and allow you to run your Flask app with the correct dependencies.
-
-Set the FLASK_APP environment variable to the name of your Flask app's entry point file. This is usually app.py or main.py. You can set the environment variable by running the following command:
-
-
-
-set FLASK_APP=app.py     
-
-This tells Flask which file to use as the entry point for your app.
-
-
-export FLASK_ENV=development  # Linux/Mac
-set FLASK_ENV=development     # Windows
-Run the Flask app by running the following command:
-
-Copy code
-flask run
+5. Start the web server:
+```
+$ (env) python -m flask run
+```
 This will start the Flask development server and your app will be accessible at http://localhost:5000 in your web browser.
+Alternatively you can use devkakeri.pythonanywhere.com to test the API
 
-ALternatively you can use devkakeri.pythonanywhere.com to test the API
 
-Note: If you want to use a different port number, you can specify it by running flask run --port=8080, for example.
+## Steps to run on docker
 
-Once you're done running your Flask app, you can stop the development server by pressing Ctrl+C in the terminal.
+1. First buuild a docker image
+
+```
+$ docker build --tag python-docker .
+
+```
+2. Run the docker image as a container
+```
+$ docker run -d -p 5000:5000 python-docker
+```
+
